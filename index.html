@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allure Beauty and Spa | Onuoha Vivian</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #fce7f3 0%, #ffffff 50%, #fce7f3 100%);
+            min-height: 100vh;
+            color: #374151;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 8px 32px rgba(244, 114, 182, 0.12);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            border-bottom: 1px solid rgba(244, 114, 182, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ec4899, #f472b6, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.2rem;
+            font-family: 'Georgia', serif;
+        }
+
+        .logo .tagline {
+            font-size: 0.9rem;
+            color: #6b7280;
+            font-style: italic;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #6b7280;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: #ec4899;
+            transform: translateY(-2px);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background: linear-gradient(45deg, #f472b6, #ec4899);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(252, 231, 243, 0.6), rgba(255, 255, 255, 0.8), rgba(252, 231, 243, 0.4));
+            padding: 140px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at center, rgba(244, 114, 182, 0.08) 0%, transparent 65%);
+            animation: gentleFloat 8s ease-in-out infinite;
+        }
+
+        @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(180deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero .spa-name {
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, #ec4899, #f472b6, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            animation: elegantShimmer 4s ease-in-out infinite;
+            text-shadow: 0 4px 20px rgba(244, 114, 182, 0.2);
+        }
+
+        .hero .owner-name {
+            font-size: 1.4rem;
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            font-family: 'Georgia', serif;
+        }
+
+        @keyframes elegantShimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero .tagline {
+            font-size: 1.4rem;
+            color: #6b7280;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+            font-family: 'Georgia', serif;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 45px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .cta-primary {
+            background: linear-gradient(45deg, #ec4899, #f472b6);
+            color: white;
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
+        }
+
+        .cta-secondary {
+            background: rgba(255, 255, 255, 0.9);
+            color: #ec4899;
+            border: 2px solid #f472b6;
+            box-shadow: 0 8px 25px rgba(244, 114, 182, 0.15);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-4px);
+        }
+
+        .cta-primary:hover {
+            box-shadow: 0 15px 40px rgba(236, 72, 153, 0.4);
+        }
+
+        .cta-secondary:hover {
+            box-shadow: 0 12px 35px rgba(244, 114, 182, 0.25);
+            background: rgba(252, 231, 243, 0.9);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #374151;
+            font-family: 'Georgia', serif;
+            position: relative;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(45deg, #ec4899, #f472b6);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            fon-size: 1.2rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2.5rem;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(244, 114, 182, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(244, 114, 182, 0.1);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(45deg, #ec4899, #f472b6, #fbbf24);
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(244, 114, 182, 0.2);
+            border-color: #f472b6;
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #ec4899, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            color: #374151;
+            font-family: 'Georgia', serif;
+        }
+
+        .service-card p {
+            color: #6b7280;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: linear-gradient(135deg, rgba(252, 231, 243, 0.4), rgba(255, 255, 255, 0.8));
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: #374151;
+            font-family: 'Georgia', serif;
+        }
+
+        .about-text .highlight {
+            color: #ec4899;
+            font-weight: bold;
+        }
+
+        .about-text p {
+            font-size: 1.15rem;
+            color: #6b7280;
+            line-height: 1.9;
+            margin-bottom: 1.8rem;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(244, 114, 182, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ec4899;
+            display: block;
+        }
+
+        .stat-label {
+            color: #6b7280;
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid #f472b6;
+            border-radius: 25px;
+            z-index: -1;
+        }
+
+        .placeholder-image {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(135deg, #fce7f3, #ffffff, #fce7f3);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: #ec4899;
+            box-shadow: 0 20px 40px rgba(244, 114, 182, 0.2);
+            font-family: 'Georgia', serif;
+            font-style: italic;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: rgba(252, 231, 243, 0.3);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(244, 114, 182, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(244, 114, 182, 0.1);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(244, 114, 182, 0.15);
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            color: #6b7280;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            color: #ec4899;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: linear-gradient(135deg, rgba(252, 231, 243, 0.6), rgba(255, 255, 255, 0.9));
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 10px 30px rgba(244, 114, 182, 0.1);
+        }
+
+        .contact-item:hover {
+            border-color: #f472b6;
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(244, 114, 182, 0.2);
+        }
+
+        .contact-item i {
+            font-size: 3rem;
+            color: #ec4899;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #374151;
+            font-family: 'Georgia', serif;
+        }
+
+        .contact-item p {
+            color: #6b7280;
+            font-size: 1.05rem;
+        }
+
+        .contact-item a {
+            color: #ec4899;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            color: #be185d;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(45deg, #ec4899, #f472b6);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: 'Georgia', serif;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 2rem;
+            margin-top: 2rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero .spa-name {
+                font-size: 2.8rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2, .about-text h2 {
+                font-size: 2.2rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease;
+        }
+
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease;
+        }
+
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <h1>Allure Beauty & Spa</h1>
+                <span class="tagline">by Onuoha Vivian</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1 class="spa-name">Allure Beauty & Spa</h1>
+                <p class="owner-name">Founded & Operated by Onuoha Vivian</p>
+                <p class="tagline">Where Elegance Meets Excellence<br>Experience luxury beauty treatments in the heart of Abuja</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="cta-button cta-primary">Book Appointment</a>
+                    <a href="#services" class="cta-button cta-secondary">Explore Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Signature Services</h2>
+                <p>Indulge in our comprehensive range of premium beauty and wellness treatments</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">💅</div>
+                    <h3>Luxury Nail Care</h3>
+                    <p>Exquisite manicures, pedicures, and artistic nail designs using premium products. From classic elegance to bold statement art, we create nails that reflect your unique style.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">✨</div>
+                    <h3>Advanced Facial Treatments</h3>
+                    <p>Rejuvenating facial therapies tailored to your skin type. Deep cleansing, anti-aging treatments, and customized skincare solutions for radiant, healthy skin.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">💇‍♀️</div>
+                    <h3>Hair Styling & Care</h3>
+                    <p>Professional hair services including cutting, styling, coloring, and treatments. Our expert stylists use premium products to transform and maintain your hair's health and beauty.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🌸</div>
+                    <h3>Relaxation Spa</h3>
+                    <p>Therapeutic body treatments, aromatherapy, and massage services designed to restore balance and tranquility. Escape stress and rejuvenate your mind and body.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">💄</div>
+                    <h3>Makeup Artistry</h3>
+                    <p>Professional makeup application for special occasions, photoshoots, or everyday glamour. Bridal makeup, evening looks, and makeup lessons available.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🛍️</div>
+                    <h3>Beauty Boutique</h3>
+                    <p>Curated selection of premium beauty products, cosmetics, and skincare from trusted international brands. Take home the luxury with our retail collection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text slide-in-left">
+                    <h2>About <span class="highlight">Allure Beauty & Spa</span></h2>
+                    <p>Welcome to Allure Beauty & Spa, where luxury meets expertise. Founded by <strong>Onuoha Vivian</strong>, our spa represents years of passion and dedication to the beauty industry.</p>
+                    <p>Located in the prestigious Floben Plaza at FHA Lugbe, we have created a sanctuary where modern beauty techniques blend seamlessly with traditional wellness practices. Our state-of-the-art facility is designed to provide you with an unforgettable experience of relaxation and transformation.</p>
+                    <p>At Allure, we believe that true beauty radiates from within. Our mission is to enhance your natural beauty while providing a peaceful retreat from the demands of daily life.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Premium Services</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Satisfaction Rate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image slide-in-right">
+                    <div class="placeholder-image">
+                        Luxurious Spa Interior
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Client Testimonials</h2>
+                <p>Hear what our valued clients say about their Allure experience</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Allure Beauty & Spa is absolutely amazing! Vivian and her team provide exceptional service in such a relaxing environment. My skin has never looked better!"</p>
+                    <p class="testimonial-author">— Sarah A.</p>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The attention to detail and professionalism here is outstanding. I always leave feeling pampered and beautiful. Highly recommend!"</p>
+                    <p class="testimonial-author">— Grace M.</p>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"From the moment you walk in, you feel the luxury and care. The nail art is incredible and the facial treatments are divine!"</p>
+                    <p class="testimonial-author">— Jennifer O.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Visit Allure Today</h2>
+                <p>Experience the ultimate in beauty and relaxation</p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item fade-in">
+                    <i class="fas fa-phone"></i>
+                    <h3>Call Us</h3>
+                    <p><a href="tel:+2349064569715">+234 906 456 9715</a></p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #9ca3af;">Available Mon-Sat 9AM-7PM</p>
+                </div>
+                <div class="contact-item fade-in">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:vonuoha95@gmail.com">vonuoha95@gmail.com</a></p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #9ca3af;">We'll respond within 24 hours</p>
+                </div>
+                <div class="contact-item fade-in">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Visit Our Spa</h3>
+                    <p><a href="https://maps.app.goo.gl/J5c8Cds1r9WibP8v9?g_st=com.google.maps.preview.copy" target="_blank">Floben Plaza<br>FHA Lugbe, Abuja</a></p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #9ca3af;">Ample parking available</p>
+                </div>
+                <div class="contact-item fade-in">
+                    <i class="fas fa-clock"></i>
+                    <h3>Operating Hours</h3>
+                    <p>Monday - Saturday<br>9:00 AM - 7:00 PM</p>
+                    <p style="margin-top: 0.5rem;">Sunday: 12:00 PM - 5:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Allure Beauty & Spa</div>
+                <ul class="footer-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="tel:+2349064569715">Call Now</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Allure Beauty & Spa by Onuoha Vivian. All rights reserved. | Crafted with 💖 for beauty excellence</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 8px 35px rgba(244, 114, 182, 0.2)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 8px 32px rgba(244, 114, 182, 0.12)';
+            }
+        });
+
+        // Elegant sparkle animation
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.style.position = 'absolute';
+            sparkle.style.width = '6px';
+            sparkle.style.height = '6px';
+            sparkle.style.background = 'radial-gradient(circle, #f472b6, #ec4899)';
+            sparkle.style.borderRadius = '50%';
+            sparkle.style.pointerEvents = 'none';
+            sparkle.style.animation = 'elegantSparkle 3s ease-out infinite';
+            sparkle.style.left = Math.random() * 100 + '%';
+            sparkle.style.top = Math.random() * 100 + '%';
+            sparkle.style.opacity = '0';
+            
+            document.querySelector('.hero').appendChild(sparkle);
+            
+            setTimeout(() => {
+                sparkle.remove();
+            }, 3000);
+        }
+
+        // Add sparkle animation CSS
+        const sparkleCSS = `
+            @keyframes elegantSparkle {
+                0% { 
+                    opacity: 0; 
+                    transform: scale(0) rotate(0deg); 
+                }
+                20% { 
+                    opacity: 1; 
+                    transform: scale(1) rotate(90deg); 
+                }
+                80% { 
+                    opacity: 1; 
+                    transform: scale(1) rotate(270deg); 
+                }
+                100% { 
+                    opacity: 0; 
+                    transform: scale(0) rotate(360deg); 
+                }
+            }
+        `;
+        const style = document.createElement('style');
+        style.textContent = sparkleCSS;
+        document.head.appendChild(style);
+
+        // Create sparkles periodically
+        setInterval(createSparkle, 1200);
+
+        // Add mobile menu toggle functionality
+        function createMobileMenu() {
+            const nav = document.querySelector('nav');
+            const navLinks = document.querySelector('.nav-links');
+            
+            // Create mobile menu button
+            const mobileMenuBtn = document.createElement('button');
+            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            mobileMenuBtn.style.cssText = `
+                display: none;
+                background: none;
+                border: none;
+                color: #ec4899;
+                font-size: 1.5rem;
+                cursor: pointer;
+                padding: 0.5rem;
+            `;
+            
+            // Insert mobile menu button
+            nav.appendChild(mobileMenuBtn);
+            
+            // Mobile menu toggle
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+            
+            // Show/hide mobile menu button based on screen size
+            function checkScreenSize() {
+                if (window.innerWidth <= 768) {
+                    mobileMenuBtn.style.display = 'block';
+                    navLinks.style.cssText = `
+                        display: none;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        right: 0;
+                        background: rgba(255, 255, 255, 0.98);
+                        flex-direction: column;
+                        padding: 2rem;
+                        box-shadow: 0 8px 25px rgba(244, 114, 182, 0.2);
+                        border-radius: 0 0 15px 15px;
+                    `;
+                } else {
+                    mobileMenuBtn.style.display = 'none';
+                    navLinks.style.cssText = `
+                        display: flex;
+                        position: static;
+                        background: none;
+                        flex-direction: row;
+                        padding: 0;
+                        box-shadow: none;
+                        border-radius: 0;
+                    `;
+                }
+            }
+            
+            checkScreenSize();
+            window.addEventListener('resize', checkScreenSize);
+        }
+        
+        // Initialize mobile menu
+        createMobileMenu();
+
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Stats counter animation
+        function animateStats() {
+            const stats = document.querySelectorAll('.stat-number');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const text = target.textContent;
+                        const number = parseInt(text.replace(/\D/g, ''));
+                        const suffix = text.replace(/\d/g, '');
+                        
+                        let current = 0;
+                        const increment = number / 50;
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= number) {
+                                current = number;
+                                clearInterval(timer);
+                            }
+                            target.textContent = Math.floor(current) + suffix;
+                        }, 30);
+                        
+                        observer.unobserve(target);
+                    }
+                });
+            });
+            
+            stats.forEach(stat => observer.observe(stat));
+        }
+        
+        // Initialize stats animation
+        animateStats();
+    </script>
+</body>
+</html>
